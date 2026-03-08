@@ -1,152 +1,185 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chúc Mừng 8/3 – Ngọc Dung 🌸</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Nunito:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chúc Mừng 8/3🌸</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Nunito:wght@400;600&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff0f3;
-    font-family: 'Nunito', sans-serif;
-    overflow: hidden;
-  }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff0f3;
+      font-family: 'Nunito', sans-serif;
+      overflow: hidden;
+    }
 
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 15% 20%, rgba(255,182,193,0.45) 0%, transparent 55%),
-      radial-gradient(ellipse at 85% 80%, rgba(220,20,60,0.12) 0%, transparent 50%);
-    z-index: 0;
-  }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(255, 182, 193, 0.45) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 80%, rgba(220, 20, 60, 0.12) 0%, transparent 50%);
+      z-index: 0;
+    }
 
-  .card {
-    position: relative;
-    z-index: 1;
-    background: transparent;
-    border-radius: 20px;
-    padding: 52px 48px;
-    max-width: 460px;
-    width: 90%;
-    text-align: center;
-    animation: popIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
+    .card {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      border-radius: 20px;
+      padding: 52px 48px;
+      max-width: 460px;
+      width: 90%;
+      text-align: center;
+      animation: popIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
 
-  @keyframes popIn {
-    from { opacity: 0; transform: scale(0.92) translateY(16px); }
-    to   { opacity: 1; transform: scale(1) translateY(0); }
-  }
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.92) translateY(16px);
+      }
 
-  .emoji {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 20px;
-    animation: swing 2.5s ease-in-out infinite;
-  }
-  @keyframes swing {
-    0%,100% { transform: rotate(-8deg); }
-    50%     { transform: rotate(8deg); }
-  }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
 
-  .name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.4rem;
-    color: #e8193c;
-    margin-bottom: 6px;
-  }
+    .emoji {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 20px;
+      animation: swing 2.5s ease-in-out infinite;
+    }
 
-  .date {
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #f4a0b0;
-    margin-bottom: 28px;
-  }
+    @keyframes swing {
 
-  .divider {
-    width: 48px;
-    height: 2px;
-    background: linear-gradient(90deg, #f7a8b8, #e8193c, #f7a8b8);
-    border-radius: 2px;
-    margin: 0 auto 28px;
-  }
+      0%,
+      100% {
+        transform: rotate(-8deg);
+      }
 
-  .message {
-    font-size: 1.05rem;
-    line-height: 1.85;
-    color: #5a2030;
-  }
+      50% {
+        transform: rotate(8deg);
+      }
+    }
 
-  .message strong {
-    color: #e8193c;
-    font-weight: 600;
-  }
+    .name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.4rem;
+      color: #e8193c;
+      margin-bottom: 6px;
+    }
 
-  .footer {
-    margin-top: 32px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.2rem;
-    color: #f4a0b0;
-  }
+    .date {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #f4a0b0;
+      margin-bottom: 28px;
+    }
 
-  .hearts {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-  }
-  .heart {
-    position: absolute;
-    bottom: -30px;
-    opacity: 0;
-    animation: floatUp linear infinite;
-  }
-  @keyframes floatUp {
-    0%   { transform: translateY(0) scale(1); opacity: 0.6; }
-    100% { transform: translateY(-110vh) scale(0.4); opacity: 0; }
-  }
-</style>
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #f7a8b8, #e8193c, #f7a8b8);
+      border-radius: 2px;
+      margin: 0 auto 28px;
+    }
+
+    .message {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #5a2030;
+    }
+
+    .message strong {
+      color: #e8193c;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 32px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.2rem;
+      color: #f4a0b0;
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -30px;
+      opacity: 0;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: translateY(-110vh) scale(0.4);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="hearts" id="hearts"></div>
+  <div class="hearts" id="hearts"></div>
 
-<div class="card">
-  <span class="emoji">🌸</span>
+  <div class="card">
+    <span class="emoji">🌸</span>
 
-  <div class="date">8 tháng 3 · Ngày của những người tuyệt vời</div>
-  <div class="divider"></div>
-  <p class="message">
-    Chúc em <strong>8/3 vui vẻ, hạnh phúc</strong>,<br>
-    ngày càng xinh đẹp, ngày càng thành công,<br>
-    ngày càng rực rỡ. 🌹<br><br>
-    Chúc em <strong>tất cả trừ vất vả</strong> nhé! 💕
-  </p>
-  <div class="footer">Happy Women's Day! 💕</div>
-</div>
+    <div class="date">8 tháng 3 · Ngày của những người tuyệt vời</div>
+    <div class="divider"></div>
+    <p class="message">
+      Chúc em <strong>8/3 vui vẻ, hạnh phúc</strong>,<br>
+      ngày càng xinh đẹp, ngày càng thành công,<br>
+      ngày càng rực rỡ. 🌹<br><br>
+      Chúc em <strong>tất cả trừ vất vả</strong> nhé! 💕
+    </p>
+    <div class="footer">Happy Women's Day! 💕</div>
+  </div>
 
-<script>
-  const hearts = document.getElementById('hearts');
-  const emojis = ['💕','🌸','❤️','🌹','💗','✨'];
-  for (let i = 0; i < 18; i++) {
-    const h = document.createElement('span');
-    h.className = 'heart';
-    h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-    h.style.left = Math.random() * 100 + 'vw';
-    h.style.fontSize = (0.7 + Math.random() * 1.2) + 'rem';
-    h.style.animationDuration = (7 + Math.random() * 10) + 's';
-    h.style.animationDelay = (Math.random() * 10) + 's';
-    hearts.appendChild(h);
-  }
-</script>
+  <script>
+    const hearts = document.getElementById('hearts');
+    const emojis = ['💕', '🌸', '❤️', '🌹', '💗', '✨'];
+    for (let i = 0; i < 18; i++) {
+      const h = document.createElement('span');
+      h.className = 'heart';
+      h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = (0.7 + Math.random() * 1.2) + 'rem';
+      h.style.animationDuration = (7 + Math.random() * 10) + 's';
+      h.style.animationDelay = (Math.random() * 10) + 's';
+      hearts.appendChild(h);
+    }
+  </script>
 </body>
+
 </html>
